@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://ganesh-mk.github.io/Calculator/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://ganesh-mk.github.io/Calculator/CalculatorIcon.webp">
+    <title>Calculator</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0rem;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 82%;
+        overflow: hidden;
+    }
+    .main{
+        user-select: none;
+        caret-color: transparent;
+        background: #141414;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .calculator{
+        background: #141414;
+        border-radius: 4.0rem;
+        width: 29.0rem;
+        height: 55.5rem;
+    }
+    .history-container{
+        margin: 0rem 0rem 3.6rem -.7rem;
+        width: 26.7rem;
+        text-align: right;
+    }
+    #history{
+        color: #838383;
+        font-size: 2.6rem;
+        font-family: 'Lato', sans-serif;
+    }
+    .screen{
+        position: relative;
+        background: transparent;
+        border-radius: 4.0rem;
+        height: 17.5rem;
+        padding: 0rem 2.5rem 0rem 0rem;
+        display: grid;
+        place-items: center;
+    }
+    .display{
+        outline: none;
+        overflow-x: scroll;
+        background: transparent;
+        border: none;
+        font-family: 'Lato', sans-serif;
+        top: 9.4rem;
+        left: 0;
+        color: white;
+        text-align: right;
+        font-size: 5.0rem;
+        width: 26.5rem;
+        position: absolute;
+    }
+    .line-container{
+        display: grid;
+        place-items: center;
+    }
+    .line{
+        border-radius: 10.0rem;
+        background: #7a7a7a;
+        height: .2rem;
+        width: 24.0rem;
+       
+    }
+    .button-container{
+        height: 35.0rem;
+        padding: 2.0rem 0rem 0rem 1.2rem;
+    }
+    .buttons{
+        cursor: pointer;
+        font-size: 2.0rem;
+        border: none;
+        height: 5.0rem;
+        width: 5.0rem;
+        margin: .5rem .6rem;
+        border-radius: 10.0rem;
+        transition: 0.2s linear;
+    }
+    .buttons:hover{
+        transform: scale(1.1);
+    
+    }
+    .zero{
+        width: 11.6rem;
+    }
+    .grey{
+        background: rgb(179, 179, 179);
+    }
+    .grey:hover{
+        background: rgb(234, 234, 234);
+    }
+    .grey:active{
+        color: rgb(234, 234, 234);
+    }
+    
+    .black{
+        font-size: 2.5rem;
+        color: white;
+        background: rgba(84, 84, 84, 0.742);
+    }
+    .black:hover{
+        background: rgb(104, 104, 104);
+    }
+    .black:active{
+        color: rgb(104, 104, 104);
+    }
+    
+    .orange{
+        color: white;
+        font-size: 2.5rem;
+        background: #ff9100;
+    }
+    .orange:hover{
+        background: #ffb649;
+    }
+    .orange:active{
+        color: #ffb649;
+    }
+    
+    
+    
+    
+    @media (max-width: 300px) {
+        html{
+            font-size: 55%;
+        }
+    }
+    @media (max-width: 257px) {
+        html{
+            font-size: 50%;
+        }
+    }
+    @media (max-width: 235px) {
+        html{
+            font-size: 45%;
+        }
+    }
+    @media (max-width: 210px) {
+        html{
+            font-size: 40%;
+        }
+    }
+    @media (max-width: 187px) {
+        html{
+            font-size: 35%;
+        }
+    }
+</style></head>
+
+<body>
+    <div class="main">
+        <form class="calculator" name="calculator">
+            <div class="screen">
+                <div class="history-container">
+                    <p id="history"></p>
+                </div>
+                <input type="text" class="display" name="screen" placeholder="00">
+            </div>
+            <div class="line-container">
+                <div class="line"></div>
+            </div>
+            <div class="button-container">
+                <input class="buttons grey" type="button" value="AC" onclick="Cfunction()"> 
+                <input class="buttons grey" type="button" value="C" onclick="ACfunction()"> 
+                <input class="buttons grey" type="button" value="%" onclick="valueButton(this)"> 
+                <input class="buttons orange" type="button" value="/" onclick="valueButton(this)"> 
+
+                <input class="buttons black" type="button" value="7" onclick="valueButton(this)"> 
+                <input class="buttons black" type="button" value="8" onclick="valueButton(this)"> 
+                <input class="buttons black" type="button" value="9" onclick="valueButton(this)"> 
+                <input class="buttons orange" type="button" value="*" onclick="valueButton(this)"> 
+
+                <input class="buttons black" type="button" value="4" onclick="valueButton(this)"> 
+                <input class="buttons black" type="button" value="5" onclick="valueButton(this)"> 
+                <input class="buttons black" type="button" value="6" onclick="valueButton(this)"> 
+                <input class="buttons orange" type="button" value="-" onclick="valueButton(this)"> 
+
+                <input class="buttons black" type="button" value="1" onclick="valueButton(this)"> 
+                <input class="buttons black" type="button" value="2" onclick="valueButton(this)"> 
+                <input class="buttons black" type="button" value="3" onclick="valueButton(this)"> 
+                <input class="buttons orange" type="button" value="+" onclick="valueButton(this)"> 
+
+                <input class="buttons black zero" type="button" value="0" onclick="valueButton(this)"> 
+                <input class="buttons black" type="button" value="." onclick="valueButton(this)"> 
+                <input class="buttons orange" type="button" value="=" onclick="equal()"> 
+            </div>
+            <div class="nav-container">
+                <div class="nav"></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function valueButton(e){
+            calculator.screen.value += e.value;
+        }
+        function Cfunction(){
+            calculator.screen.value = null;
+            document.getElementById('history').innerHTML = null;
+        
+        }
+        function ACfunction(){
+            calculator.screen.value = calculator.screen.value.substring(0,calculator.screen.value.length-1);
+        }
+        function equal(){
+            document.getElementById('history').innerHTML = calculator.screen.value;
+            try{
+                calculator.screen.value = eval(calculator.screen.value);   
+            }
+            catch{
+                calculator.screen.value = "Error";
+            }
+           
+        }
+    </script>
+
+
+
+</body></html>
