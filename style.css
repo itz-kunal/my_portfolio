@@ -581,7 +581,10 @@ nav {
     body{
         min-height:100vh;
     }
-
+    .home{
+        margin-top: 0px; 
+    }
+        
     .projectInfo {
       
         margin-left: 0;
@@ -725,7 +728,7 @@ nav {
 
     .home {
         padding: 0;
-        margin-top: 4rem;
+        margin-top: 0px;
     }
 
     .navItems {
