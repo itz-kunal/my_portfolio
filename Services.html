@@ -28,19 +28,26 @@
         }
         .payment{
             font-size: 2.1rem;
-            width: 120px;
-            height: 32px;
-            background:linear-gradient(rgb(37, 178, 37),rgb(8, 100, 8));
+            width: auto;
+            color: aliceblue;
+            padding: 10px 15px;
+            /* height: 32px; */
+            background:linear-gradient(rgb(25, 150, 25),rgb(8, 100, 8));
             border: none;
-            border-radius: 25px;
-            margin:25px 0px 30px 310px;
+            border-radius: 15px;
+            margin:25px 0px 30px 110px;
+        }
+        .payment:hover{
+            background:linear-gradient(rgb(13, 96, 13),rgb(4, 71, 4));
+
+
         }
 
         .contact {
             margin-top: 10rem;
         }
 
-/*         @media (max-width: 1020px) {
+        /* @media (max-width: 1020px) {
             html {
                 font-size: 55%;
             }
@@ -58,22 +65,32 @@
             body {
                 min-height: 100vh;
             }
-        }
+        } */
 
-        @media (max-width: 750px) {
+        /* @media (max-width: 750px) {
             html {
                 font-size: 50%;
             }
 
             body {
                 min-height: 100vh;
-            }
+            } 
+        } */
+        .note{
+            margin: 25px auto;
+            text-align: center;
+            font-family: 'Source Serif Pro';
+            font-size: 2.1rem;
+        }
+        .note a{
+            /* text-decoration: none; */
+            color: black;
+        }
+        .note a:hover{
+            color: blue;
         }
 
         @media (max-width: 580px) {
-            html {
-                font-size: 43%;
-            }
 
             .navItems {
                 font-size: 3rem;
@@ -83,13 +100,15 @@
                 min-height: 100vh;
             }
 
-        } */
+        }
     </style>
 </head>
 
 <body id="home" data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
     <nav class="navbar">
         <div class="logoctnr"><a href="#contact" class="logo"></a>nal</div>
+        <ion-icon class="hamburger" onclick="openMenu()" name="menu" id="openMenu"></ion-icon>
+        <ion-icon name="close" class="hamburger" onclick="closeMenu()" id="closeMenu"></ion-icon>
         <div class="navList">
             <a href="index.html" class="navItems">Home</a>
             <a href="About.html" class="navItems">About Me</a>
@@ -108,19 +127,23 @@
                 <li>Basic contact form.
                 <li>Standard design with stock images.
                 <li>3 days delivery.
+                <li>Free Hosting</li>
+                <li>Free Domain</li>
             </ul>
-            <input class="payment" type="submit" value="Pay $50">
+            <a href="https://wa.me/9122874046"><input class="payment" type="submit" value="Just in ₹3499"> </a>
         </div>
         <div class="serviceCtnr">
             <div class="servicesHeader">✨ Standard Package - Dynamic Web App ✨</div>
             <ul>
                 <li>Complete web application development using React.js.
                 <li>Up to 10 responsive web pages.
-                <li>Integration of dynamic content and database (e.g., Firebase).
+                <li>Integration of dynamic content and database .
                 <li>User authentication and authorization.
                 <li>5 days delivery.
+                <li>Free Hosting</li>
+                <li>Free Domain</li>
             </ul>
-            <input class="payment" type="submit" value="Pay $50">
+            <a href="https://wa.me/9122874046"><input class="payment" type="submit" value="Just in ₹6999"> </a>
         </div>
         <div class="serviceCtnr">
             <div class="servicesHeader">✨ Premium Package - Full-Stack Development ✨</div>
@@ -131,19 +154,24 @@
                 <li>SEO optimization.
                 <li>Performance optimization for faster load times.
                 <li>10-20 days delivery as your website.
+                <li>Free Hosting</li>
+                <li>Free Domain</li>
             </ul>
-            <input class="payment" type="submit" value="Pay $50">
+            <a href="https://wa.me/9122874046"><input class="payment" type="submit" value="just in ₹12499"> </a>
         </div>
         <div class="serviceCtnr">
             <div class="servicesHeader">Add-On Services:</div>
             <ul>
-                <li>Additional web pages (+$10 per page).
-                <li>Content management system (CMS) integration (+$20).
-                <li>Deployment to your server or hosting platform (+$20).
-                <li>E-commerce functionality (+$50).
-                <li>Ongoing maintenance and support (+$50 per month).
+                <li>Additional web pages (+₹500 per page).
+                <li>Content management system (CMS) integration (+₹1500).
+                <!-- <li>Deployment to your server or hosting platform (+$20). -->
+                <li>E-commerce functionality (+₹4999).
+                <li>Ongoing maintenance and support (+₹5000 per month).
             </ul>
         </div>
+       <div class="note"><b>Note :</b> Price can varry depending upon your project, the above details are for your idea 
+           price shall be discussed later. <a href="https//wa.me/9122874046">  Contact Us</a></div>
+
     </div>
 
     <footer class="contact" id="contact">
