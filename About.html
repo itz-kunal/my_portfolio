@@ -13,6 +13,7 @@
         body {
             background: linear-gradient(rgba(21, 21, 21, 0.737), #3dd9f82b);
             font-size: 2rem;
+            font-family: 'Source Serif Pro';
         }
 
         h2 {
@@ -20,7 +21,7 @@
         }
         p{
             line-height: 1.4;
-            font-family: cursive;
+            font-family: 'Source Serif Pro';
             font-size: 2.1rem;
         }
 
@@ -52,7 +53,7 @@
         }
 
 
-/*         @media (max-width: 1020px) {
+        /* @media (max-width: 1020px) {
             html {
                 font-size: 55%;
             }
@@ -80,11 +81,14 @@
             body {
                 min-height: 100vh;
             }
-        }
+        }*/
 
         @media (max-width: 580px) {
-            html {
-                font-size: 43%;
+            .main_container ol li{
+                margin-left: 0px
+            }
+            .main_container ol li ul li{
+                margin-left: 0px;
             }
 
             .navItems {
@@ -95,13 +99,15 @@
                 min-height: 100vh;
             }
 
-        } */
+        } 
     </style>
 </head>
 
-<body>
+<body style="font-family: 'Source Serif Pro';">
     <nav class="navbar">
         <div class="logoctnr"><a href="#contact" class="logo"></a>nal</div>
+        <ion-icon class="hamburger" onclick="openMenu()" name="menu" id="openMenu"></ion-icon>
+        <ion-icon name="close" class="hamburger" onclick="closeMenu()" id="closeMenu"></ion-icon>
         <div class="navList">
             <a href="index.html" class="navItems">Home</a>
             <a href="#" class="navItems">About Me</a>
@@ -111,7 +117,7 @@
         </div>
     </nav>
     <div class="main_container">
-        <h2>About Me:</h2><br>
+        <h2  style="font-family: 'Source Serif Pro';">About Me:</h2><br>
 
         <p>I'm a passionate and results-driven web developer with 1 year of experience in the industry. My goal is to
             provide you with top-notch web development services tailored to your unique needs. Whether you need a simple
@@ -122,7 +128,7 @@
         <h3>What I Offer:</h3>
 
         <ol>
-            <li>Front-End Development:
+            <li style="font-family: 'Source Serif Pro';">Front-End Development:
                 <ul>
                     <li>HTML5: I'll create semantic and SEO-friendly HTML structures.
                     <li>CSS3: I'll style your website beautifully and responsively.
@@ -130,36 +136,36 @@
                     <li>React: I'll build interactive and dynamic web applications with React.js.
                 </ul>
 
-            <li>Back-End Development:
+            <li style="font-family: 'Source Serif Pro';">Back-End Development:
                 <ul>
                     <li>Node.js: I'll develop server-side applications and APIs using Node.js.
                 </ul>
-            <li>Full-Stack Development:
+            <li style="font-family: 'Source Serif Pro';">Full-Stack Development:
 
                 <ul>
                     <li>Need a complete end-to-end solution? I can handle both front-end and back-end development to
                         ensure a seamless
                         user experience.
                 </ul>
-            <li>Responsive Design:
+            <li style="font-family: 'Source Serif Pro';">Responsive Design:
 
                 <ul>
                     <li>Your website will look stunning and function flawlessly on all devices and screen sizes.
                 </ul>
-            <li>Performance Optimization:
+            <li style="font-family: 'Source Serif Pro';">Performance Optimization:
 
                 <ul>
                     <li>I'll optimize your website for speed and efficiency, enhancing user experience and SEO
                         ranking.
                 </ul>
-            <li>Bug Fixing and Maintenance:
+            <li style="font-family: 'Source Serif Pro';">Bug Fixing and Maintenance:
 
                 <ul>
                     <li>Already have a website but encountering issues? I can troubleshoot and fix any bugs to keep
                         your site running
                         smoothly
                 </ul>
-            <li>Custom Web Applications:
+            <li style="font-family: 'Source Serif Pro';">Custom Web Applications:
 
                 <ul>
                     <li>If you have a unique idea or project, I can develop a custom web application to meet your
@@ -167,32 +173,32 @@
                 </ul>
         </ol>
         <br>
-        <h3>Why Choose Me:</h3>
+        <h3 style="font-family: 'Source Serif Pro';">Why Choose Me:</h3>
 
         <ul>
-            <li><b>Quality Assurance : </b> I take pride in delivering high-quality work that meets industry standards.
+            <li><b style="font-family: 'Source Serif Pro';">Quality Assurance : </b> I take pride in delivering high-quality work that meets industry standards.
 
-            <li><b>Timely Delivery : </b> I understand the importance of deadlines and will work diligently to ensure your
+            <li><b style="font-family: 'Source Serif Pro';">Timely Delivery : </b> I understand the importance of deadlines and will work diligently to ensure your
                 project is
                 completed on time.
 
-            <li><b>Clear Communication : </b> I believe in transparent and effective communication to keep you updated
+            <li><b style="font-family: 'Source Serif Pro';">Clear Communication : </b> I believe in transparent and effective communication to keep you updated
                 throughout the
                 development process.
 
-            <li><b>Client Satisfaction : </b> Your satisfaction is my priority, and I'm committed to exceeding your
+            <li><b style="font-family: 'Source Serif Pro';">Client Satisfaction : </b> Your satisfaction is my priority, and I'm committed to exceeding your
                 expectations.
 
-            <li><b>Affordable Pricing : </b> I offer competitive rates without compromising on quality.
+            <li><b style="font-family: 'Source Serif Pro';">Affordable Pricing : </b> I offer competitive rates without compromising on quality.
         </ul>
-        <div class="getstrt">
+        <div class="getstrt" style="font-family: 'Source Serif Pro'; font-size: 2.1rem;">
         Ready to get started? Contact me today, and let's discuss your web development needs. I'm excited to work with
         you
         and turn your web project into a reality!
         </div>
         <br><br>
-        <div class="note">
-        <b>Note : </b> Please message me before placing an order to discuss project details and ensure a smooth collaboration
+        <div class="note" style="font-family: 'Source Serif Pro';">
+        <b>Note : </b > Please message me before placing an order to discuss project details and ensure a smooth collaboration
         </div>
     </div>
     <footer class="contact" id="contact">
