@@ -16,3 +16,18 @@ skillBoxs.forEach((e) => {
         e.classList.add("skillNotHover");
     })
 })
+// ------hamburger section-------------
+let hamburger = document.getElementsByClassName('hamburger')
+let menu = document.querySelector('.navList');
+// menu.style.display='flex';
+function openMenu() {
+    hamburger[0].style.display = 'none';
+    hamburger[1].style.display = 'block'
+    menu.style.display = 'flex';
+}
+// openMenu()
+function closeMenu() {
+    hamburger[1].style.display = 'none';
+    hamburger[0].style.display = 'block'
+    menu.style.display = 'none'
+}
