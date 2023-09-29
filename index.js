@@ -18,7 +18,7 @@ skillBoxs.forEach((e) => {
 })
 // ------hamburger section-------------
 let hamburger = document.getElementsByClassName('hamburger')
-let menu = document.querySelector('.navList');
+let menu = document.getElementsById('navList');
 // menu.style.display='flex';
 function openMenu() {
     hamburger[0].style.display = 'none';
